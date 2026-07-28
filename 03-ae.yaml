@@ -4,7 +4,7 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: roboshop-access-entries
+  name: roboshop # this is EKS cluster name
   region: us-east-1
 
 accessConfig:
@@ -21,3 +21,5 @@ accessConfig:
       type: STANDARD # optional Type
       kubernetesGroups: # optional Kubernetes groups
         - devops-trainees # groups can used to give permissions via RBAC
+
+# eksctl create accessentry -f 03-ae.yaml
